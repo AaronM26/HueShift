@@ -28,7 +28,7 @@ struct ImageEditorView: View {
     }
     
     private func createFinalImage() -> UIImage {
-        let maxDimension: CGFloat = 4000 // Adjust this value according to your desired maximum dimension
+        let maxDimension: CGFloat = 4000 
         
         let newSize = CGSize(
             width: min(selectedImage!.size.width, maxDimension),
@@ -96,7 +96,7 @@ struct ImageEditorView: View {
                     .saturation(saturation)
                     .brightness(brightness)
                     .padding()
-                    .clipShape(RoundedRectangle(cornerRadius: 10)) // Add this line for rounded corners
+                    .clipShape(RoundedRectangle(cornerRadius: 10)) 
             }
             
             VStack(alignment: .leading, spacing: 12) {
