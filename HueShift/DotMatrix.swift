@@ -32,11 +32,11 @@ struct DotMatrix: View {
                 }
             }
         }
-        .id(viewId)  // Add this line to redraw the view each time it appears
+        .id(viewId)
         .onAppear {
             animate = true
             animationAmount = 6
-            viewId = UUID()  // Generate a new id each time the view appears
+            viewId = UUID() 
         }
         .onChange(of: scenePhase) { newScenePhase in
             if newScenePhase == .active {
@@ -45,7 +45,7 @@ struct DotMatrix: View {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                     animate = true
                     animationAmount = 6
-                    viewId = UUID()  // Generate a new id each time the view becomes active
+                    viewId = UUID() 
                 }
             }
         }
